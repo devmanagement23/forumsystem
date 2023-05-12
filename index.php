@@ -14,11 +14,7 @@
     <?php include 'partials/_header.php'; ?>
     <?php include 'partials/_dbconnect.php'; ?>
 
-
-    <div class="container my-3">
-      <h2 class="text-center">CodeDiscuss - Categories</h2>
-
-          <!-- ----------------------------------------------------------------------------------- -->
+          <!-- -----crousel------------------------------------------------------------------------------ -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -46,28 +42,44 @@
         </a>
       </div>
 
-            <!-- ---------------------------------------------------------------------------------- -->
+      <!-- -------------------------------cards--------------------------------------------------- -->
+    <div class="container my-4">
+      <h2 class="text-center my-4">CodeDiscuss - Categories</h2>       
 
-      <div class="row">
-        <!-- for_loop to iterate through category in cards -->
+      <div class="row my-4">
 
-            <!-- ------------------------------------------------------- -->
+         <!-- fetching categories from database -->
+        <?php 
+          $sql = "SELECT * FROM categories";          
+          $result = mysqli_query($conn,$sql);
 
-        <div class="col-md-4 my-2">
-          <div class="card" style="width: 18rem;">
-            <img src="https://source.unsplash.com/600x400/?flower,rose" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View Threads</a>
-            </div>
-          </div>          
-        </div>
+            //  while loop to iterate through category in cards
 
-              <!-- ------------------------------------------------------- -->
+          while($row = mysqli_fetch_assoc($result)){
+            //echo $row['category_id'];
+            $cat = $row['category_name'];
+
+            //card
+            echo '<div class="col-md-4 my-2">
+                    <div class="card" style="width: 18rem;">
+                      <img src="https://source.unsplash.com/600x400/?'. $cat .',coding" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">'. $cat .'</h5>
+                        <p class="card-text">'.$row['category_description'] .'....</p>
+                        <a href="#" class="btn btn-primary">View Threads</a>
+                        </div>
+                        </div>          
+                        </div>';
+                      }          
+                      
+        ?>
+
+                                                <!-- $description =$row['category_description'];
+
+                                                  <p class="card-text">'.substr($description,0,20).'.</p>
+                                               -->
       </div>
-    </div>
-    
+    </div>    
 
     
     <?php include 'partials/_footer.php'; ?>
