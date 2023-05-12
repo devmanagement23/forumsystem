@@ -26,20 +26,23 @@ echo ' <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/forumsystem/contact.php" tabindex="-1">Contact</a>
+                <a class="nav-link" href="/forumsystem/contact.php" >Contact</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+
         <div class="mx-2 ml-4">
-            <button class="btn btn-outline-success">Login</button>
-            <button class="btn btn-outline-primary">signup</button>
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">Login</button>
+            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal2">signup</button>
         </div>
         
     </div>
 </nav>';
 
+include 'partials/_loginModal.php';
+include 'partials/_signupModal.php';
 
 ?>

@@ -12,10 +12,13 @@
   </head>
   <body>
     <?php include 'partials/_header.php'; ?>
+    <?php include 'partials/_dbconnect.php'; ?>
+
+
     <div class="container my-3">
       <h2 class="text-center">CodeDiscuss - Categories</h2>
 
-<!-- ----------------------------------------------------------------------------------- -->
+          <!-- ----------------------------------------------------------------------------------- -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -43,15 +46,16 @@
         </a>
       </div>
 
- <!-- ---------------------------------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------------------------------- -->
 
       <div class="row">
-
         <!-- for_loop to iterate through category in cards -->
+
+            <!-- ------------------------------------------------------- -->
 
         <div class="col-md-4 my-2">
           <div class="card" style="width: 18rem;">
-            <img src="https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772243_960_720.jpg" class="card-img-top" alt="...">
+            <img src="https://source.unsplash.com/600x400/?flower,rose" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -60,6 +64,7 @@
           </div>          
         </div>
 
+              <!-- ------------------------------------------------------- -->
       </div>
     </div>
     
