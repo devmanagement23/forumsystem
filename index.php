@@ -23,13 +23,16 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://source.unsplash.com/1600x400/?code,java" class="d-block w-100" alt="...">
+            <!-- <img src="https://source.unsplash.com/1600x400/?code,java" class="d-block w-100" alt="..."> -->
+            <img src="img/slider-1.jfif" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://source.unsplash.com/1600x400/?code,python" class="d-block w-100" alt="...">
+            <!-- <img src="https://source.unsplash.com/1600x400/?code,python" class="d-block w-100" alt="..."> -->
+            <img src="img/slider-3.jfif" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://source.unsplash.com/1600x400/?code,hacker" class="d-block w-100" alt="...">
+            <!-- <img src="https://source.unsplash.com/1600x400/?code,hacker" class="d-block w-100" alt="..."> -->
+            <img src="img/slider-4.jfif" class="d-block w-100" alt="...">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -77,7 +80,11 @@
                                                 <!-- $description =$row['category_description'];
 
                                                   <p class="card-text">'.substr($description,0,20).'.</p>
-                                               -->
+                                              
+                                              
+                             <img src="https://source.unsplash.com/600x400/?'. $cat .',coding" class="card-img-top" alt="...">
+             
+                                                -->
       </div>
     </div>    
 
